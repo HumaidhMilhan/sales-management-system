@@ -149,11 +149,11 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="p-4 space-y-3 flex-1">
                 {[
-                  { name: 'Vanilla Syrup (Stock: 24)', msg: 'Expires in 3 days. Consider discount promotion.', color: 'orange' },
-                  { name: 'Almond Milk (Stock: 10)', msg: 'Expires in 5 days. Low priority.', color: 'yellow' }
+                  { name: 'Vanilla Syrup (Stock: 24)', msg: 'Expires in 3 days. Consider discount promotion.', colorClass: 'bg-orange-100 text-orange-600' },
+                  { name: 'Almond Milk (Stock: 10)', msg: 'Expires in 5 days. Low priority.', colorClass: 'bg-yellow-100 text-yellow-600' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-background-light border border-slate-200">
-                    <div className={`bg-${item.color}-100 text-${item.color}-600 rounded-full p-1.5 mt-0.5 shrink-0`}>
+                    <div className={`${item.colorClass} rounded-full p-1.5 mt-0.5 shrink-0`}>
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
